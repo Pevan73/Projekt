@@ -15,15 +15,19 @@ while True:
         pojisteny = Pojisteny(jmeno, prijmeni, vek, telefon)
         sprava_pojisteni.pridej_pojisteneho(pojisteny)
         print("Pojištěný byl přidán.")
+        input("Stiskněte libovolnou klávesu pro pokračování...")
     elif volba == "2":
         sprava_pojisteni.zobraz_seznam()
+        input("Stiskněte libovolnou klávesu pro pokračování...")
     elif volba == "3":
         jmeno = input("Jméno: ")
         prijmeni = input("Příjmení: ")
         pojisteny = sprava_pojisteni.vyhledej_pojisteneho(jmeno, prijmeni)
         if pojisteny:
             print(pojisteny)
+            input("Stiskněte libovolnou klávesu pro pokračování...")
         else:
             print("Pojištěný nebyl nalezen.")
+            input("Stiskněte libovolnou klávesu pro pokračování...")
     elif volba == "4":
         break
